@@ -1,0 +1,370 @@
+<!-- /templates/my-form.html-->
+
+<html>
+
+<head>
+    <title>TCNJ</title>
+</head>
+
+<body>
+    <h3>TCNJ Fleet Vehicle Management </h3>
+
+    <body style="background-color: powderblue;"></body>
+
+    <h4 style="color:teal;">Example 1</h4>
+    <form action="/make-model" method="POST">
+        <div>
+            List the current vehicle category for the make
+            <!-- <input type="text" name="make"> -->
+            <select name="make">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <!-- <input type="text" name="model"> -->
+            <select name="model">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 2</h4>
+    <form action="/make1-model1" method="POST">
+        <div>
+            List the proposed vehicle category for the make
+            <select name="make1">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model1">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 3</h4>
+    <form action="/make2-model2" method="POST">
+        <div>
+            List the future vehicle category for the make
+            <select name="make2">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model2">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 4</h4>
+    <form action="/deptname" method="POST">
+        <div>
+            List the total number of cars in the department
+            <select name="deptname">
+                {% for deptRow in departments %}
+                {%for deptCol in deptRow%}
+                <option value={{deptCol}}> {{deptCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 5</h4>
+    <form action="/make3-model3" method="POST">
+        <div>
+            Provide the department name to which the make
+            <select name="make3">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model3">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            belongs to
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 6</h4>
+    <form action="/costtype-make4-model4" method="POST">
+        <div>
+            List the (cost type)
+            <select name="costtype">
+                {% for modelRow in costtypes %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            for all the make
+            <select name="make4">
+                {% for modelRow in makes %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model4">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 7</h4>
+    <form action="/make5-model5" method="POST">
+        <div>
+            List the annual emission for the make
+            <select name="make5">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model5">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 8</h4>
+    <form action="/total-emission" method="POST">
+        <div>
+            List the total annual emission for the make
+            <select name="total-emission">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 9</h4>
+    <form action="/emission-type" method="POST">
+        <div>
+            List the emission type for all the (make)
+            <select name="emission-type">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            cars
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 10</h4>
+    <form action="/make6-model6" method="POST">
+        <div>
+            List the current engine type for the make
+            <select name="make6">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model6">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 11</h4>
+    <form action="/make7-model7" method="POST">
+        <div>
+            List the proposed engine type for the make
+            <select name="make7">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model7">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 12</h4>
+    <form action="/make8-model8" method="POST">
+        <div>
+            List the future engine type for the make
+            <select name="make8">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model8">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 13</h4>
+    <form action="/year1" method="POST">
+        <div>
+            List all the cars that are manufactured below the year
+            <select name="year1">
+                {% for yearRow in years %}
+                {%for year in yearRow%}
+                <option value={{year}}> {{year}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 14</h4>
+    <form action="/year2" method="POST">
+        <div>
+            List all the cars that are manufactured above the year
+            <select name="year2">
+                {% for yearRow in years %}
+                {%for year in yearRow%}
+                <option value={{year}}> {{year}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 15</h4>
+    <form action="/year3" method="POST">
+        <div>
+            List all the cars that are manufactured in the year
+            <select name="year3">
+                {% for yearRow in years %}
+                {%for year in yearRow%}
+                <option value={{year}}> {{year}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h4 style="color:teal;">Example 16</h4>
+    <form action="/make9-model9" method="POST">
+        <div>
+            List the proposed and future year for the make
+            <select name="make9">
+                {% for makeRow in makes %}
+                {%for makeCol in makeRow%}
+                <option value={{makeCol}}> {{makeCol}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+            and model
+            <select name="model9">
+                {% for modelRow in models %}
+                {%for model in modelRow%}
+                <option value={{model}}> {{model}} </option>
+                {%endfor%}
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+<!-- minimal styling -->
+<style>
+    form {
+        margin: 2%;
+    }
+
+    div {
+        margin: 3% 0;
+    }
+</style>
+
+</html>
