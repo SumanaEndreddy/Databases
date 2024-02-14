@@ -5,23 +5,11 @@ The objective of our model is to build a user-friendly interface that gives the 
 
 ## Table of Contents
 ** **
-- Our Team
 - Features
 - Updates
 - Installation and Usage
 - Technology and Concepts
 
-## Our Team
--- --
-|Name|Email|Major|
-|------|-----|-------|      
-|Maxwell Luz | luzm1@tcnj.edu|Computer Science
-|John Donegan |  donegaj2@tcnj.edu|Accounting
-|Sumana Endreddy | endreds1@tcnj.edu|Computer Science
-|Alexandra Merritt | merrita4@tcnj.edu| Accounting
-|Brian Petrovic | petrovb1@tcnj.edu| Accounting
-|Harkiran Arora | arorah2@tcnj.edu| Accounting
-|Haadi Malik | malikh5@tcnj.edu| Computer Science
 
 ## Features
 -- --
